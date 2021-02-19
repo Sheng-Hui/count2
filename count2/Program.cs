@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 
 namespace count2
 {
@@ -55,50 +56,59 @@ namespace count2
             num1 = double.Parse(val1);
             num2 = double.Parse(val2);
 
+            Console.WriteLine("請輸入運算符號: ");
+            var oper = Console.ReadLine();
+
+            var result = 0d;
+            var utility = new Utility();
+            result = utility.Operate(num1, num2, oper);
+
+            Console.WriteLine("得到的結果為 {0}", result);
+
             //Console.WriteLine("1. + , 2. - , 3. * , 4. /");
-            Console.WriteLine("");
-            Console.WriteLine("===============");
+            //Console.WriteLine("");
+            //Console.WriteLine("===============");
 
-            Console.WriteLine("1. + ");
-            Console.WriteLine("2. - ");
-            Console.WriteLine("3. * ");
-            Console.WriteLine("4. / ");
+            //Console.WriteLine("1. + ");
+            //Console.WriteLine("2. - ");
+            //Console.WriteLine("3. * ");
+            //Console.WriteLine("4. / ");
 
-            Console.Write("請輸入1~4 執行四則運算: ");
+            //Console.Write("請輸入1~4 執行四則運算: ");
 
 
-            string option = Console.ReadLine();
+            //string option = Console.ReadLine();
 
-            Console.WriteLine("===============");
-            if (option == "1")
+            //Console.WriteLine("===============");
+            //if (option == "1")
 
-            {
-                output = num1 + num2;
-                Console.WriteLine("{0} + {1} = {2}", num1, num2, output);
-            }
-            else if (option == "2")
-            {
-                output = num1 - num2;
-                Console.WriteLine("{0} - {1} = {2}", num1, num2, output);
-            }
-            else if (option == "3")
-            {
-                output = num1 * num2;
-                Console.WriteLine("{0} * {1} = {2}", num1, num2, output);
-            }
-            else if (option == "4")
-            {
-                if (num2 != 0)
-                {
-                    output = num1 / num2;
-                    Console.WriteLine("{0} * {1} = {2}", num1, num2, output);
-                }
-                else
-                    Console.WriteLine("數值2 不應該為0", num2);
-            }
-            else
-                Console.WriteLine("請輸入1~4執行");
-            Console.ReadLine();
+            //{
+            //    output = num1 + num2;
+            //    Console.WriteLine("{0} + {1} = {2}", num1, num2, output);
+            //}
+            //else if (option == "2")
+            //{
+            //    output = num1 - num2;
+            //    Console.WriteLine("{0} - {1} = {2}", num1, num2, output);
+            //}
+            //else if (option == "3")
+            //{
+            //    output = num1 * num2;
+            //    Console.WriteLine("{0} * {1} = {2}", num1, num2, output);
+            //}
+            //else if (option == "4")
+            //{
+            //    if (num2 != 0)
+            //    {
+            //        output = num1 / num2;
+            //        Console.WriteLine("{0} * {1} = {2}", num1, num2, output);
+            //    }
+            //    else
+            //        Console.WriteLine("數值2 不應該為0", num2);
+            //}
+            //else
+            //    Console.WriteLine("請輸入1~4執行");
+            //Console.ReadLine();
             /*
             switch (option)
             {

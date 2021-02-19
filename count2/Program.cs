@@ -86,9 +86,13 @@ namespace count2
                     Console.WriteLine("{0} * {1} = {2}", num1, num2, output);
                     break;
                 case "4":
-                    output = num1 / num2;
-                    Console.WriteLine("{0} / {1} = {2}", num1, num2, output);
-                    break;
+                    //在case4中加入if失敗
+                    if (num2 != 0)
+                    {
+                        output = num1 / num2;
+                        Console.WriteLine("{0} / {1} = {2}", num1, num2, output);
+                        break;
+                    }
                 default:
                     Console.WriteLine("Invalid Option");
                     break;

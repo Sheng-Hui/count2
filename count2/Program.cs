@@ -70,7 +70,36 @@ namespace count2
             string option = Console.ReadLine();
 
             Console.WriteLine("===============");
+            if (option == "1")
 
+            {
+                output = num1 + num2;
+                Console.WriteLine("{0} + {1} = {2}", num1, num2, output);
+            }
+            else if (option == "2")
+            {
+                output = num1 - num2;
+                Console.WriteLine("{0} - {1} = {2}", num1, num2, output);
+            }
+            else if (option == "3")
+            {
+                output = num1 * num2;
+                Console.WriteLine("{0} * {1} = {2}", num1, num2, output);
+            }
+            else if (option == "4")
+            {
+                if (num2 != 0)
+                {
+                    output = num1 / num2;
+                    Console.WriteLine("{0} * {1} = {2}", num1, num2, output);
+                }
+                else
+                    Console.WriteLine("數值2 不應該為0", num2);
+            }
+            else
+                Console.WriteLine("請輸入1~4執行");
+            Console.ReadLine();
+            /*
             switch (option)
             {
                 case "1":
@@ -87,18 +116,18 @@ namespace count2
                     break;
                 case "4":
                     //在case4中加入if失敗
-                    if (num2 != 0)
-                    {
+                    //if (num2 != 0)
+                    //{
                         output = num1 / num2;
                         Console.WriteLine("{0} / {1} = {2}", num1, num2, output);
                         break;
-                    }
+                    //}
                 default:
                     Console.WriteLine("Invalid Option");
                     break;
             }
             Console.Read();
-
+            /*
             /*
             double Num1, Num2,output;
             

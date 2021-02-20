@@ -8,7 +8,7 @@ namespace count2
         static void Main(string[] args)
         {
             string val1, val2;
-            double judgetDouble, num1, num2, output;
+            double judgetDouble, num1, num2;
             Console.WriteLine("測試計算機");
             Console.WriteLine("請分別輸入2個數值");
 
@@ -56,7 +56,7 @@ namespace count2
             num1 = double.Parse(val1);
             num2 = double.Parse(val2);
 
-            Console.WriteLine("請輸入運算符號: ");
+            Console.WriteLine("請輸入運算符號(+,-,*,/): ");
             var oper = Console.ReadLine();
 
             var result = 0d;

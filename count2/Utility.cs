@@ -7,14 +7,14 @@ namespace count2
 {
     public class Utility
     {
-
-        public double Operate(double num1, double num2, string oper)
+        //public double Operate(double num1, double num2, string oper)
+        public string Operate(double num1, double num2, string oper)
         {
-            var result = 0d;
+            //var result = 0d;
+            var result = "";
             switch (oper)
             {
                 case "+":
-
                     /*var test = new Test();
                     var addOp = test as IAddOperator;*/
 
@@ -22,7 +22,6 @@ namespace count2
                     var addition = new Addition();
                     result = addition.Operate(num1, num2);
                     //result = num1 + num2;
-
                     break;
                 case "-":
                     var subtraction = new Subtraction();
@@ -41,7 +40,8 @@ namespace count2
                         result = division.Operate(num1, num2);
                     }
                     else
-                        Console.WriteLine("數值2不得為0");
+                        //Console.WriteLine("數值2不得為0");
+                        result = "除數不得為0";
                     break;
             }
             return result;
@@ -49,30 +49,47 @@ namespace count2
         }
         private class Addition
         {
-            public double Operate(double n1, double n2)
+            //public double Operate(double n1, double n2)
+            public string Operate(double n1, double n2)
             {
-                return n1 + n2;
+                double d = n1 + n2;
+                return Convert.ToString(d);
+                // reutrn n1 + n2;
             }
         }
         private class Subtraction
         {
-            public double Operate(double n1, double n2)
+            //public double Operate(double n1, double n2)
+            public string Operate(double n1, double n2)
             {
-                return n1 - n2;
+                double d = n1 - n2;
+                return Convert.ToString(d);
+                //return n1 - n2;
             }
         }
         private class Multiplication
         {
-            public double Operate(double n1, double n2)
+            //public double Operate(double n1, double n2)
+            public string Operate(double n1, double n2)
             {
-                return n1 * n2;
+                double d = n1 * n2;
+                return Convert.ToString(d);
+                //return n1 * n2;
             }
         }
         private class Division
         {
-            public double Operate(double n1, double n2)
+            //public double Operate(double n1, double n2)
+            public string Operate(double n1, double n2)
             {
-                return n1 / n2;
+                if (n2 != 0)
+                {
+                    double d = (n1 / n2);
+                    return Convert.ToString(d);
+                }
+                else
+                    //Console.WriteLine("數值2不得為0");
+                    return null;
             }
         }
     }

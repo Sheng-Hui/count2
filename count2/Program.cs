@@ -59,7 +59,8 @@ namespace count2
             Console.WriteLine("請輸入運算符號(+,-,*,/): ");
             var oper = Console.ReadLine();
 
-            var result = 0d;
+            //var result = 0d;
+            var result = "";
             var utility = new Utility();
             result = utility.Operate(num1, num2, oper);
 

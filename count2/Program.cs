@@ -17,10 +17,12 @@ namespace count2
 
             Console.WriteLine("測試計算機");
             Console.WriteLine("請分別輸入2個數值");
-            
-            val1 = InputVal.GetInt(inputVal1);
-            val2 = InputVal.GetInt(inputVal2);
+            Console.WriteLine("===============\n");
 
+            val1 = InputVal.GetInt(inputVal1);
+            Console.WriteLine("\n===============\n");
+            val2 = InputVal.GetInt(inputVal2);
+            
             /*
             Console.WriteLine("===============");
             Console.Write("請輸入數值1，需為整數或小數: ");
@@ -63,11 +65,13 @@ namespace count2
                 return;
             }
             */
+
             num1 = double.Parse(val1);
             num2 = double.Parse(val2);
-
+            Console.WriteLine("\n===============\n");
             Console.WriteLine("請輸入運算符號(+,-,*,/): ");
             var oper = Console.ReadLine();
+            Console.WriteLine("\n===============\n");
 
             //var result = 0d;
             var result = "";

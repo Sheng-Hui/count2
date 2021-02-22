@@ -12,6 +12,8 @@ namespace count2
         {
             //var result = 0d;
             var result = "";
+
+            //將result 改成 string型態(原double型態會導致return無法傳null，result會顯示0)
             switch (oper)
             {
                 case "+":

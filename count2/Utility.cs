@@ -15,15 +15,12 @@ namespace count2
         {
             //var result = 0d;
             var result = "";
-            
             /*
             var addition = new Addition();
             var subtraction = new Subtraction();
             var multiplication = new Multiplication();
             var division = new Division();
             */
-
-
             //判斷oper 並分別計算結果
             switch (oper)
             {

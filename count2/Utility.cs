@@ -15,7 +15,16 @@ namespace count2
         {
             //var result = 0d;
             var result = "";
+            
+            /*
+            var addition = new Addition();
+            var subtraction = new Subtraction();
+            var multiplication = new Multiplication();
+            var division = new Division();
+            */
 
+
+            //判斷oper 並分別計算結果
             switch (oper)
             {
                 case "+":
@@ -35,6 +44,7 @@ namespace count2
                 
                 case "/":
                     var division = new Division();
+                    //防呆，如果數值2為0 將null 顯示除數不得為0
                     if (num2 != 0)
                     {
                         result = division.Operate(num1, num2);
@@ -45,6 +55,7 @@ namespace count2
             }
             return result;
         }
+
         private class Addition
         {
             //public double Operate(double n1, double n2)
@@ -80,6 +91,7 @@ namespace count2
             //public double Operate(double n1, double n2)
             public string Operate(decimal n1, decimal n2)
             {
+                //防呆，如果數值2為0回傳null
                 if (n2 != 0)
                 {
                     decimal d = (n1 / n2);

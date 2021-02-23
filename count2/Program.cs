@@ -18,19 +18,21 @@ namespace count2
             Console.WriteLine("請分別輸入2個數值");
             Console.WriteLine("===============\n");
 
-            val1 = InputVal.GetInt(inputVal1);
+            //輸入2數值，並顯示[輸入數值]為整數或分數
+            val1 = InputVal.Getdecimal(inputVal1);
             Console.WriteLine("===============\n");
-            val2 = InputVal.GetInt(inputVal2);
-
+            val2 = InputVal.Getdecimal(inputVal2);
+            Console.WriteLine("===============\n");
+            
             //string時，雖然成功回傳null及數值，中間轉換double四則運算時有誤差，改decimal
             num1 = decimal.Parse(val1);
             num2 = decimal.Parse(val2);
-            Console.WriteLine("===============\n");
-            Console.WriteLine("請輸入運算符號(+,-,*,/): ");
+            
+            Console.WriteLine("請輸入運算符號(+, -, *, /): ");
             var oper = Console.ReadLine();
             Console.WriteLine("===============\n");
 
-  
+            //輸入+-*/，進行運算
             var result = "";
             var utility = new Utility();
             result = utility.Operate(num1, num2, oper);

@@ -6,9 +6,10 @@ namespace count2
 {
     class InputVal
     {
-        public static string GetInt(int n1)
+        public static string Getdecimal(decimal n1)
         {
             var n2 = "";
+            //作為判斷數值是否為整數或分數
             double judgetDouble;
             Console.Write($"請輸入數值{n1}: ");
             n2 = Console.ReadLine();

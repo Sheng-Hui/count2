@@ -8,7 +8,10 @@ namespace count2
     public class Utility
     {
         //public double Operate(double num1, double num2, string oper)
-        public string Operate(double num1, double num2, string oper)
+        //double / 0時，會造成顯示為無限大
+        //public string Operate(double num1, double num2, string oper)
+        //string時，雖然成功回傳null及數值，中間轉換double四則運算時有誤差，改decimal
+        public string Operate(decimal num1, decimal num2, string oper)
         {
             //var result = 0d;
             var result = "";
@@ -45,9 +48,9 @@ namespace count2
         private class Addition
         {
             //public double Operate(double n1, double n2)
-            public string Operate(double n1, double n2)
+            public string Operate(decimal n1, decimal n2)
             {
-                double d = n1 + n2;
+                decimal d = n1 + n2;
                 return Convert.ToString(d);
                 // reutrn n1 + n2;
             }
@@ -55,9 +58,9 @@ namespace count2
         private class Subtraction
         {
             //public double Operate(double n1, double n2)
-            public string Operate(double n1, double n2)
+            public string Operate(decimal n1, decimal n2)
             {
-                double d = n1 - n2;
+                decimal d = n1 - n2;
                 return Convert.ToString(d);
                 //return n1 - n2;
             }
@@ -65,9 +68,9 @@ namespace count2
         private class Multiplication
         {
             //public double Operate(double n1, double n2)
-            public string Operate(double n1, double n2)
+            public string Operate(decimal n1, decimal n2)
             {
-                double d = n1 * n2;
+                decimal d = n1 * n2;
                 return Convert.ToString(d);
                 //return n1 * n2;
             }
@@ -75,11 +78,11 @@ namespace count2
         private class Division
         {
             //public double Operate(double n1, double n2)
-            public string Operate(double n1, double n2)
+            public string Operate(decimal n1, decimal n2)
             {
                 if (n2 != 0)
                 {
-                    double d = (n1 / n2);
+                    decimal d = (n1 / n2);
                     return Convert.ToString(d);
                 }
                 else

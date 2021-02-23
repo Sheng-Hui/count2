@@ -14,7 +14,6 @@ namespace count2
             n2 = Console.ReadLine();
             if (Double.TryParse(n2, out judgetDouble))
             {
-                //Console.WriteLine(Judget_double);
                 if ((Double.Parse(n2)) % 1 == 0)
                 {
                     Console.WriteLine($"數值{ n1}: { n2} 整數");

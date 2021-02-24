@@ -11,7 +11,7 @@ namespace count2
         public decimal num1, num2, result;
         public string operA;
 
-        public void View()
+        public void Result()
         {
             Console.WriteLine("計算結果=> " + num1 + " " + operA + " " + num2 + " = " + result);
         }

@@ -29,7 +29,7 @@ namespace count2
             
             //string時，雖然成功回傳null及數值，中間轉換double四則運算時有誤差，改decimal
             
-            // 將val丟到宣告的類別calc num中
+            // 將val丟到宣告的calc num中
             calc.num1 = decimal.Parse(val1);
             calc.num2 = decimal.Parse(val2);
             
@@ -37,7 +37,7 @@ namespace count2
 
             var oper = Console.ReadLine();
             //Console.WriteLine(oper);
-            //判斷是否輸入運算符號
+            //判斷輸入的運算符號
             while ((oper != "+") && (oper != "-") && (oper != "*") && (oper != "/"))
             {
 
@@ -54,21 +54,22 @@ namespace count2
             {
                 case "+":
                     calc.Addition();
-                    calc.View();
+                    //calc.View();
                     break;
                 case "-":
                     calc.Subtraction();
-                    calc.View();
+                    //calc.View();
                     break;
                 case "*":
                     calc.Multiplication();
-                    calc.View();
+                    //calc.View();
                     break;
                 case "/":
                     calc.Division();
-                    calc.View();
+                    //calc.View();
                     break;
             }
+            calc.Result();
             /*
             //進行運算
             //var result = "";

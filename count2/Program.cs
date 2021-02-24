@@ -8,13 +8,16 @@ namespace count2
         static void Main(string[] args)
         {
             //string時，雖然成功回傳null及數值，中間轉換double四則運算時有誤差，改decimal
-            decimal num1, num2;
+            //把 num1, num2給Class Operate判斷
+            //decimal num1, num2;
             var val1 = "";
             var val2 = "";
             var inputVal1 = 1;
             var inputVal2 = 2;
 
-            Console.WriteLine("測試計算機");
+            Calc calc = new Calc();
+
+            Console.WriteLine("=====計算機練習=====");
             Console.WriteLine("請分別輸入2個數值");
             Console.WriteLine("===============\n");
 
@@ -25,19 +28,56 @@ namespace count2
             Console.WriteLine("===============\n");
             
             //string時，雖然成功回傳null及數值，中間轉換double四則運算時有誤差，改decimal
-            num1 = decimal.Parse(val1);
-            num2 = decimal.Parse(val2);
             
-            Console.WriteLine("請輸入運算符號(+, -, *, /): ");
+            // 將val丟到宣告的類別calc num中
+            calc.num1 = decimal.Parse(val1);
+            calc.num2 = decimal.Parse(val2);
+            
+            Console.Write("請輸入運算符號(+, -, *, /): ");
+
             var oper = Console.ReadLine();
+            //Console.WriteLine(oper);
+            //判斷是否輸入運算符號
+            while ((oper != "+") && (oper != "-") && (oper != "*") && (oper != "/"))
+            {
+
+                Console.Write("格式錯誤，請輸入+, -, *, /: ");
+                oper = Console.ReadLine();
+                //Console.WriteLine(oper);
+            }
+            //Console.WriteLine("now oper="+ oper);
             Console.WriteLine("===============\n");
 
-            //輸入+-*/，進行運算
-            var result = "";
+            
+            calc.operA = oper;
+            switch (oper)
+            {
+                case "+":
+                    calc.Addition();
+                    calc.View();
+                    break;
+                case "-":
+                    calc.Subtraction();
+                    calc.View();
+                    break;
+                case "*":
+                    calc.Multiplication();
+                    calc.View();
+                    break;
+                case "/":
+                    calc.Division();
+                    calc.View();
+                    break;
+            }
+            /*
+            //進行運算
+            //var result = "";
+
             var utility = new Utility();
             result = utility.Operate(num1, num2, oper);
 
             Console.WriteLine("得到的結果為 {0}", result);
+            */
         }
     }
 }
